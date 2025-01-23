@@ -17,7 +17,7 @@ position: relative;
 /* Add a white text color to all elements inside the .bgimg container */
 color: white;
 /* Add a font */
-font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans', sans-serif !important;
 /* Set the font-size to 25 pixels */
 font-size: 25px;
 }
