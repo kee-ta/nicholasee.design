@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ipsum on </title>
+    <link>http://localhost:1313/tags/ipsum/</link>
+    <description>Recent content in Ipsum on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Nicholas Ee</copyright>
+    <lastBuildDate>Sat, 04 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/ipsum/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Super cool article that I wrote</title>
+      <link>http://localhost:1313/projects/gonetzero-device-registration/</link>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/gonetzero-device-registration/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/gonetzero-device-registration/cover.png" />
+    </item>
+    
+    <item>
+      <title>Miele@Home Redesign</title>
+      <link>http://localhost:1313/projects/miele@home-redesign/</link>
+      <pubDate>Thu, 01 Jan 1970 09:33:44 +0900</pubDate>
+      
+      <guid>http://localhost:1313/projects/miele@home-redesign/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/miele@home-redesign/cover.png" />
+    </item>
+    
+  </channel>
+</rss>

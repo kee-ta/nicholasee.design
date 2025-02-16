@@ -1,0 +1,42 @@
+<div class="case-study-header-content job-card-case bg-gray-100 p-8 rounded-lg shadow-md mb-6">
+    <!-- Title & Company -->
+    <div class="case-study-title-and-company flex flex-col items-center text-center">
+        <img src="{{ .Params.company_logo }}" loading="lazy" alt="{{ .Params.company }}" class="company-logo w-20 h-20">
+        <div class="h-2"></div>
+        <div class="flex items-center space-x-2 mt-0">
+            <p class="font-semibold">{{ .Params.company }}</p>
+            <p class="font-semibold">•</p>
+            <p class="font-semibold">{{ .Params.year }}</p>
+        </div>
+    </div>
+
+    <!-- Description -->
+    <div class="mt-6 text-center">
+        <p class="text-lg text-gray-700 italic">{{ .Params.description }}</p>
+    </div>
+
+    <!-- Role, Responsibilities, and Team Side by Side -->
+    <div class="flex flex-wrap justify-between gap-6">
+        <!-- Role Column -->
+        <div class="w-full md:w-1/3">
+            <h2 class="uppercase text-sm font-bold tracking-wider text-gray-600">Role</h2>
+            <p class="text-lg font-medium">{{ .Params.role }}</p>
+        </div>
+
+        <!-- Responsibilities Column -->
+        <div class="w-full md:w-1/3">
+            <h2 class="uppercase text-sm font-bold tracking-wider text-gray-600">Responsibilities</h2>
+            {{ range .Params.responsibilities }}
+            <p class="text-lg">{{ . }}</p>
+            {{ end }}
+        </div>
+
+        <!-- Team Column -->
+        <div class="w-full md:w-1/3">
+            <h2 class="uppercase text-sm font-bold tracking-wider text-gray-600">Team</h2>
+            {{ range .Params.team }}
+            <p class="text-lg">{{ . }}</p>
+            {{ end }}
+        </div>
+    </div>
+</div>

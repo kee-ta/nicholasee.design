@@ -1,0 +1,17 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = ""
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  logo = "img/site_icon.png"
+  description = "Personal website of Nicholas Ee."
+
+[params.author]
+  name = "Nicholas Ee"
+  headline = "UX Designer | Game Designer"
+  bio = "I'm a UX designer and game designer based in Singapore. I'm currently the Head of Product at a fintech startup, and a part-time lecturer at Nanyang Technological University. I'm also the founder of a game studio, where I develop mobile games."
