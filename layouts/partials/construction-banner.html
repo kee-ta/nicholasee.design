@@ -1,0 +1,42 @@
+<!-- layouts/partials/construction-banner.html -->
+<div class="construction-banner mb-12">
+    <div class="construction-content">
+      </svg>
+      <span>🚧 Website Under Construction - Please excuse the appearance while improvements are ongoing! 🚧</span>
+    </div>
+  </div>
+  
+  <style>
+  .construction-banner {
+    width: 100%;
+    background-color: #fef9c3;
+    border-bottom: 1px solid #fcd34d;
+    padding: 0.75rem 0;
+    position: relative;
+    z-index: 40;
+  }
+  
+  .construction-content {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: #92400e;
+    font-weight: 500;
+  }
+  
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  @media (max-width: 640px) {
+    .construction-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  </style>

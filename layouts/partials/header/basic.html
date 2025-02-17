@@ -3,7 +3,7 @@
     {{ if .Site.Params.Logo }}
     {{ $logo := resources.Get .Site.Params.Logo }}
     {{ if $logo }}
-    <div class="mr-2">
+    <div class="mr-0">
         <a href="{{ "" | relLangURL }}" class="flex">
             <span class="sr-only">{{ .Site.Title | markdownify }}</span>
 
@@ -12,8 +12,8 @@
                 {{ $logo.Content | safeHTML }}
             </span>
             {{ else }}
-            <img src="{{ $logo.RelPermalink }}" width="{{ div $logo.Width 9 }}" height="{{ div $logo.Height 9 }}"
-                class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="{{ .Site.Title }}" />
+            <img src="{{ $logo.RelPermalink }}" width="{{ div $logo.Width 6 }}" height="{{ div $logo.Height 6 }}"
+                class="logo max-h-[4rem] max-w-[4rem] object-scale-down object-left nozoom" alt="{{ .Site.Title }}" />
             {{ end }}
 
         </a>
@@ -42,7 +42,7 @@
 
             {{ if .Site.Params.enableSearch | default false }}
             <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
-                title="{{ i18n " search.open_button_title" }}">
+                title="{{ i18n "search.open_button_title" }}">
                 {{ partial "icon.html" "search" }}
             </button>
             {{ end }}
@@ -64,6 +64,7 @@
             {{ end }}
 
         </nav>
+        
         <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
 
             <span></span>

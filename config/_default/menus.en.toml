@@ -11,10 +11,6 @@
 # ordered by weight from lowest to highest.
 
 
-[[main]]
-  name = "Merch"
-  url = "https://www.teepublic.com/user/blowfish-store/t-shirts"
-  weight = 100
 
 #[[main]]
 #  name = "Test"
