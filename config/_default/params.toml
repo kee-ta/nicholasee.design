@@ -21,7 +21,7 @@ disableImageOptimization = false
 disableTextInHeader = false
 # backgroundImageWidth = 1200
 
-defaultBackgroundImage = "/img/background.svg"
+defaultBackgroundImage = "/img/Artboard 1.svg"
 defaultFeaturedImage = "/img/CoverBG2.png"
 
 highlightCurrentMenuArea = true

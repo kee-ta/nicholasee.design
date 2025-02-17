@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        opacity: .6;
+      }
+
+      .cls-3 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: .2px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-5, .cls-2 {
+        fill: url(#New_Pattern_3);
+        mix-blend-mode: overlay;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        isolation: isolate;
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="105.09" y1="2133.52" x2="1613.6" y2="1146.23" gradientTransform="translate(0 2114) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dfecf7"/>
+      <stop offset=".02" stop-color="#dfecf5"/>
+      <stop offset=".26" stop-color="#e7efea"/>
+      <stop offset=".53" stop-color="#eaf1e7"/>
+      <stop offset=".98" stop-color="#edf4eb"/>
+      <stop offset="1" stop-color="#eef5ec"/>
+    </linearGradient>
+    <pattern id="New_Pattern_3" data-name="New Pattern 3" x="0" y="0" width="33.75" height="33.75" patternTransform="translate(605.25 290)" patternUnits="userSpaceOnUse" viewBox="0 0 33.75 33.75">
+      <g>
+        <rect class="cls-4" width="33.75" height="33.75"/>
+        <line class="cls-3" x1=".02" y1="16.88" x2="33.73" y2="16.88"/>
+        <line class="cls-3" x1="16.88" y1=".02" x2="16.88" y2="33.73"/>
+        <circle class="cls-6" cx="16.88" cy="16.88" r=".7"/>
+      </g>
+    </pattern>
+  </defs>
+  <g class="cls-7">
+    <g id="BACKGROUND">
+      <rect class="cls-8" width="1920" height="1080"/>
+      <g class="cls-1">
+        <rect class="cls-5" width="1920" height="1080"/>
+        <rect class="cls-2" width="1920" height="1080"/>
+      </g>
+    </g>
+  </g>
+</svg>
