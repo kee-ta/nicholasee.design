@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles */
+@import "custom.css";
+
+/* Base transitions */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+/* Test if custom hover works */
+.test-card {
+    @apply border-2 border-gray-200 rounded-lg overflow-hidden transition-all duration-300;
+}
+
+.test-card:hover {
+    @apply border-blue-500 shadow-lg scale-105;
+}

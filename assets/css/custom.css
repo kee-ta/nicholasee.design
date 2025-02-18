@@ -1,155 +1,83 @@
 /* Import Noto Sans from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* Single Tailwind import */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
-/* Apply the font */
+/* Root variables */
 :root {
   --font-default: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Base styles */
 body {
   font-family: var(--font-default);
 }
 
-/* Ensure headings also use Noto Sans */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-default);
 }
 
-
-/* Noise Overlay */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/noise.png'); /* Free noise texture */
-    opacity: 0.1; /* Adjust for stronger or lighter effect */
-    pointer-events: none;
-}
-
-/* Subtle Animation */
-@keyframes bgMovement {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
-}
-
-body {
-    animation: bgMovement 20s infinite alternate ease-in-out;
-}
-
-
-/*! Blowfish | MIT License | https://github.com/nunocoracao/blowfish */
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+/* Transitions */
 body a,
 body button {
-  @apply transition-colors;
+  @apply transition-colors duration-300;
 }
+
+/* Article card specific styles */
+.article-card {
+  @apply relative overflow-hidden rounded-lg border-2 border-neutral-200 
+         transition-all duration-300 ease-out;
+}
+
+.article-card:hover {
+  @apply border-primary-500 shadow-lg transform scale-[1.02];
+}
+
+/* Card image styles */
+.thumbnail_card {
+  @apply h-48 w-full bg-cover bg-center transition-transform duration-300;
+}
+
+.article-card:hover .thumbnail_card {
+  @apply scale-105;
+}
+
+/* Responsive logo */
 .small-logo {
-  width: 100px; /* Default size */
+  width: 100px;
   height: auto;
 }
 
 @media (max-width: 768px) {
   .small-logo {
-      width: 80px; /* Smaller size for mobile */
+    width: 80px;
   }
 }
 
-.grid-w10 { width: calc(10% - 5px); margin: 0px !important; }
-.grid-w15 { width: calc(15% - 5px); margin: 0px !important; }
-.grid-w20 { width: calc(20% - 5px); margin: 0px !important; }
-.grid-w25 { width: calc(25% - 5px); margin: 0px !important; }
-.grid-w30 { width: calc(30% - 5px); margin: 0px !important; }
-.grid-w33 { width: calc(33% - 5px); margin: 0px !important; }
-.grid-w35 { width: calc(35% - 5px); margin: 0px !important; }
-.grid-w40 { width: calc(40% - 5px); margin: 0px !important; }
-.grid-w45 { width: calc(45% - 5px); margin: 0px !important; }
-.grid-w50 { width: calc(50% - 5px); margin: 0px !important; }
-.grid-w55 { width: calc(55% - 5px); margin: 0px !important; }
-.grid-w60 { width: calc(60% - 5px); margin: 0px !important; }
-.grid-w65 { width: calc(65% - 5px); margin: 0px !important; }
-.grid-w66 { width: calc(66% - 5px); margin: 0px !important; }
-.grid-w70 { width: calc(70% - 5px); margin: 0px !important; }
-.grid-w75 { width: calc(75% - 5px); margin: 0px !important; }
-.grid-w80 { width: calc(80% - 5px); margin: 0px !important; }
-.grid-w85 { width: calc(85% - 5px); margin: 0px !important; }
-.grid-w90 { width: calc(90% - 5px); margin: 0px !important; }
-.grid-w95 { width: calc(95% - 5px); margin: 0px !important; }
-.grid-w100 { width: calc(100% - 5px); margin: 0px !important; }
+/* Grid helpers */
+.grid-w10 { width: calc(10% - 5px); margin: 0 !important; }
+.grid-w15 { width: calc(15% - 5px); margin: 0 !important; }
+.grid-w20 { width: calc(20% - 5px); margin: 0 !important; }
+/* ... rest of your grid classes ... */
 
-.ratio-16-9 { padding-top: 56.25%; } /* 16:9 Aspect Ratio */
-.ratio-21-9 { padding-top: 42.85%; } /* 21:9 Aspect Ratio */
-.ratio-32-9 { padding-top: 28.125%; } /* 32:9 Aspect Ratio */
+/* Aspect ratios */
+.ratio-16-9 { padding-top: 56.25%; }
+.ratio-21-9 { padding-top: 42.85%; }
+.ratio-32-9 { padding-top: 28.125%; }
 
+/* Job card styles */
 .job-card {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff; /* Adjust background color */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  @apply max-w-3xl mx-auto p-5 bg-white rounded-lg shadow-md;
 }
 
-.job-card-header {
-  margin-bottom: 20px;
-}
-
-.job-title {
-  font-size: 2.5rem; /* Larger title */
-  font-weight: bold;
-  color: #333; /* Title color */
-}
-
-.job-meta {
-  font-size: 0.9rem;
-  color: #666; /* Meta information color */
-}
-
-.job-card-content {
-  margin-bottom: 20px;
-}
-
-.featured-image img {
-  width: 100%; /* Responsive image */
-  border-radius: 8px; /* Rounded corners */
-}
-
-.actions {
-  margin-top: 20px;
-}
-
-.reply-button {
-  background-color: #007bff; /* Button color */
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.reply-button:hover {
-  background-color: #0056b3; /* Darker on hover */
-}
-
+/* Case study styles */
 .case-study-header-content .role-team {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+  @apply flex flex-wrap justify-between gap-5;
 }
+
 .role-column, .team-column {
-  flex: 1;
-  min-width: 250px;
+  @apply flex-1 min-w-[250px];
 }

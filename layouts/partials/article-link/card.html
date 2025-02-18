@@ -1,77 +1,98 @@
 {{ $disableImageOptimization := .Page.Site.Params.disableImageOptimization | default false }}
 {{ with .Params.externalUrl }}
-<a href="{{ . }}" target="_blank" rel="external" class="min-w-full">
-  {{ else }}
-  <a href="{{ .RelPermalink }}" class="min-w-full">
-    {{ end }}
-    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
-
-      {{- with $.Params.images -}}
-      {{- range first 6 . }}
-      <meta property="og:image" content="{{ . | absURL }}" />{{ end -}}
-      {{- else -}}
-      {{- $images := $.Resources.ByType "image" -}}
-      {{- $featured := $images.GetMatch "*feature*" -}}
-      {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
-      {{ if and .Params.featureimage (not $featured) }}
-      {{- $url:= .Params.featureimage -}}
-      {{ $featured = resources.GetRemote $url }}
-      {{ end }}
-      {{- if not $featured }}{{ with .Site.Params.defaultFeaturedImage }}{{ $featured = resources.Get . }}{{ end }}{{ end -}}
-      {{ if .Params.hideFeatureImage }}{{ $featured = false }}{{ end }}
-      {{- with $featured -}}
-      {{ if or $disableImageOptimization (strings.HasSuffix $featured ".svg")}}
-        {{ with . }}
-        <div class="w-full thumbnail_card nozoom" style="background-image:url({{ .RelPermalink }});"></div>
+<a href="{{ . }}" target="_blank" rel="external" class="min-w-full group block transition-all duration-300">
+{{ else }}
+<a class="" href="{{ .RelPermalink }}" class="min-w-full group block transition-all duration-300 hover:text-primary-500 dark:hover:text-primary-400 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+{{ end }}
+    <div class="min-h-[420px] border-2 border-neutral-200 dark:border-neutral-700 rounded-lg overflow-hidden
+        transform-gpu backface-visibility-hidden
+        transition-all duration-300 ease-in-out
+        shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]
+        hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] 
+        hover:scale-[1.02] 
+        hover:border-primary-500 dark:hover:border-primary-400
+        dark:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]
+        dark:hover:shadow-[0_0_20px_rgba(0,0,0,0.1)]
+        group/card">
+        
+        {{- with $.Params.images -}}
+        {{- range first 6 . }}
+        <meta property="og:image" content="{{ . | absURL }}" />{{ end -}}
+        {{- else -}}
+        {{- $images := $.Resources.ByType "image" -}}
+        {{- $featured := $images.GetMatch "*feature*" -}}
+        {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+        {{ if and .Params.featureimage (not $featured) }}
+        {{- $url := .Params.featureimage -}}
+        {{ $featured = resources.GetRemote $url }}
         {{ end }}
-      {{ else }}
-        {{ with .Resize "600x" }}
-        <div class="w-full thumbnail_card nozoom" style="background-image:url({{ .RelPermalink }});"></div>
-        {{ end }}
-      {{ end }}
-      {{- else -}}
-      {{- with $.Site.Params.images }}
-      <meta property="og:image" content="{{ index . 0 | absURL }}" />{{ end -}}
-      {{- end -}}
-      {{- end -}}
-
-
-      {{ if and .Draft .Site.Params.article.showDraftLabel }}
-      <span class="absolute top-0 right-0 m-2">
-        {{ partial "badge.html" (i18n "article.draft" | emojify) }}
-      </span>
-      {{ end }}
-
-      <div class="px-6 py-4">
-
-        {{ with .Params.externalUrl }}
-        <div>
-          <div
-            class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral">
-            {{ $.Title | emojify }}
-            <span class="text-xs align-top cursor-default text-neutral-400 dark:text-neutral-500">
-              <span class="rtl:hidden">&#8599;</span>
-              <span class="ltr:hidden">&#8598;</span>
-            </span>
-          </div>
-        </div>
+        {{- if not $featured }}{{ with .Site.Params.defaultFeaturedImage }}{{ $featured = resources.Get . }}{{ end }}{{ end -}}
+        {{ if .Params.hideFeatureImage }}{{ $featured = false }}{{ end }}
+        {{- with $featured -}}
+        {{ if or $disableImageOptimization (strings.HasSuffix $featured ".svg")}}
+            {{ with . }}
+            <div class="w-full h-48 thumbnail_card nozoom transition-transform duration-300 group-hover:scale-105 bg-cover bg-center" 
+                 style="background-image: url('{{ .RelPermalink }}');">
+            </div>
+            {{ end }}
         {{ else }}
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="{{ .RelPermalink }}">{{ .Title | emojify }}</div>
+            {{ with .Resize "800x400" }}
+            <div class="w-full h-48 thumbnail_card nozoom transition-transform duration-300 group-hover:scale-105 bg-cover bg-center" 
+                 style="background-image:url({{ .RelPermalink }});">
+            </div>
+            {{ end }}
+        {{ end }}
+        {{- else -}}
+        {{- with $.Site.Params.images }}
+        <meta property="og:image" content="{{ index . 0 | absURL }}" />{{ end -}}
+        {{- end -}}
+        {{- end -}}
+
+        {{ if and .Draft .Site.Params.article.showDraftLabel }}
+        <span class="absolute top-0 right-0 m-2">
+            {{ partial "badge.html" (i18n "article.draft" | emojify) }}
+        </span>
         {{ end }}
 
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          {{ partial "article-meta/basic.html" . }}
+        <div class="px-6 py-1">
+            {{ with .Params.externalUrl }}
+            <div class="mb-8">
+                <div class="font-bold text-xl text-neutral-800 dark:text-neutral
+                    transition-colors duration-300
+                    group-hover/card:text-blue-500 dark:group-hover/card:text-blue-400">
+                    {{ $.Title | emojify }}
+                    <span class="text-xs align-top cursor-default text-neutral-400 dark:text-neutral-500">
+                        <span class="rtl:hidden">&#8599;</span>
+                        <span class="ltr:hidden">&#8598;</span>
+                    </span>
+                </div>
+            </div>
+            {{ else }}
+            <div class="mb-8">
+                <div class="font-bold text-xl text-neutral-800 dark:text-neutral
+                    transition-colors duration-300
+                    group-hover/card:text-blue-500 dark:group-hover/card:text-blue-400">
+                    {{ .Title | emojify }}
+                </div>
+            </div>
+            {{ end }}
+            
+            <div class="text-sm text-neutral-500 dark:text-neutral-400 flex items-center">
+                {{ if .Params.company }}
+                <span class="mr-2">{{ .Params.company }}</span>
+                <span class="mx-2">•</span>
+                {{ end }}
+                <span class="ml-2">{{ partial "article-meta/basic.html" . }}</span>
+            </div>
+            
+            {{ if .Params.showSummary | default (.Site.Params.list.showSummary | default false) }}
+            <div class="py-1 prose dark:prose-invert">
+                {{ .Summary | plainify }}
+            </div>
+            {{ end }}
         </div>
-
-        {{ if .Params.showSummary | default (.Site.Params.list.showSummary | default false) }}
-        <div class="py-1 prose dark:prose-invert">
-          {{ .Summary | plainify }}
+        
+        <div class="px-6 pt-4 pb-2">
         </div>
-        {{ end }}
-      </div>
-      <div class="px-6 pt-4 pb-2">
-
-      </div>
     </div>
-  </a>
+</a>
