@@ -2,7 +2,7 @@
 {{ with .Params.externalUrl }}
 <a href="{{ . }}" target="_blank" rel="external" class="min-w-full group block transition-all duration-300">
 {{ else }}
-<a class="" href="{{ .RelPermalink }}" class="min-w-full group block transition-all duration-300 hover:text-primary-500 dark:hover:text-primary-400 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+<a href="{{ .RelPermalink }}" class="min-w-full group block transition-all duration-300 hover:text-primary-500 dark:hover:text-primary-400 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
 {{ end }}
     <div class="min-h-[420px] border-2 border-neutral-200 dark:border-neutral-700 rounded-lg overflow-hidden
         transform-gpu backface-visibility-hidden
