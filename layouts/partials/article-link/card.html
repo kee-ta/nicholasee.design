@@ -38,7 +38,7 @@
         {{ else }}
             {{ with .Resize "800x400" }}
             <div class="w-full h-48 thumbnail_card nozoom transition-transform duration-300 group-hover:scale-105 bg-cover bg-center" 
-                 style="background-image:url({{ .RelPermalink }});">
+                 style="background-image: url('{{ .RelPermalink }}');">
             </div>
             {{ end }}
         {{ end }}
