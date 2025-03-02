@@ -1,12 +1,22 @@
 ---
 title: "Super cool article that I wrote"
 summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna."
-categories: ["Post","Blog",]
-tags: ["post","lorem","ipsum"]
+categories: ["Projects","Blog",]
+tags: ["Projects","lorem","ipsum"]
 #externalUrl: ""
 #showSummary: true
 date: 2021-09-04
 draft: false
+year: "2020"
+role: "Lead Product Designer"
+responsibilities:
+  - "System Design"
+  - "User Interface Design"
+team:
+  - "Product Manager"
+  - "Engineer"
+  - "Research"
+  - "Analytics"
 ---
 
 ## Lorem ipsum dolor sit amet

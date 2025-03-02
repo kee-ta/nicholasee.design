@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on NE</title>
+    <link>http://localhost:1313/categories/projects/</link>
+    <description>Recent content in Projects on NE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Nicholas Ee</copyright>
+    <lastBuildDate>Sat, 04 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Streamlining REC Device Registrations</title>
+      <link>http://localhost:1313/projects/gonetzero-device-registration-copy/</link>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/gonetzero-device-registration-copy/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/gonetzero-device-registration-copy/cover.png" />
+    </item>
+    
+    <item>
+      <title>Super cool article that I wrote</title>
+      <link>http://localhost:1313/projects/gonetzero-device-registration-copy-2/</link>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/gonetzero-device-registration-copy-2/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/gonetzero-device-registration-copy-2/cover.png" />
+    </item>
+    
+    <item>
+      <title>Super cool article that I wrote</title>
+      <link>http://localhost:1313/projects/gonetzero-device-registration-copy-3/</link>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/gonetzero-device-registration-copy-3/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/gonetzero-device-registration-copy-3/cover.png" />
+    </item>
+    
+    <item>
+      <title>Super cool article that I wrote</title>
+      <link>http://localhost:1313/projects/gonetzero-device-registration/</link>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/gonetzero-device-registration/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/gonetzero-device-registration/cover.jpg" />
+    </item>
+    
+    <item>
+      <title>Miele@Home Redesign</title>
+      <link>http://localhost:1313/projects/miele@home-redesign-copy/</link>
+      <pubDate>Thu, 01 Jan 1970 09:33:44 +0900</pubDate>
+      
+      <guid>http://localhost:1313/projects/miele@home-redesign-copy/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/miele@home-redesign-copy/cover.png" />
+    </item>
+    
+    <item>
+      <title>Miele@Home Redesign</title>
+      <link>http://localhost:1313/projects/miele@home-redesign/</link>
+      <pubDate>Thu, 01 Jan 1970 09:33:44 +0900</pubDate>
+      
+      <guid>http://localhost:1313/projects/miele@home-redesign/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/miele@home-redesign/cover.png" />
+    </item>
+    
+  </channel>
+</rss>

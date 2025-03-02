@@ -1,0 +1,76 @@
+{{ with .Params.figma }}
+  {{ $url := .url }}
+  {{ $height := .height | default "500" }}
+  {{ $title := .title | default "Figma Prototype" }}
+  {{ $allowFullscreen := .fullscreen | default "true" }}
+
+  <div class="figma-embed-container card">
+    {{ if .title }}
+    <div class="figma-embed-header">
+      <h3 class="figma-title">{{ $title }}</h3>
+    </div>
+    {{ end }}
+    <div class="figma-embed-frame">
+      <iframe 
+        src="{{ $url }}"
+        height="{{ $height }}"
+        allowfullscreen="{{ $allowFullscreen }}"
+        frameborder="0"
+        loading="lazy"
+        title="{{ $title }}"
+        class="figma-iframe">
+      </iframe>
+    </div>
+  </div>
+{{ end }}
+
+<style>
+.figma-embed-container {
+  padding: 1.5rem;
+  margin: 2rem 0;
+  background-color: var(--card-background);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+}
+
+.figma-embed-header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Title Styling */
+.figma-title {
+  font-family: var(--heading-font-family, sans-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
+
+.figma-embed-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.figma-iframe {
+  width: 100%;
+  border: 1px solid var(--card-border-color);
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .figma-embed-container {
+    padding: 1rem;
+  }
+  
+  .figma-title {
+    font-size: 1.25rem;
+  }
+}
+</style>

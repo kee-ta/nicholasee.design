@@ -1,8 +1,8 @@
 ---
 title: "Miele@Home Redesign"
 summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna."
-categories: ["Post","Blog",]
-tags: ["post","lorem","ipsum"]
+categories: ["Projects","Blog",]
+tags: ["Projects","lorem","ipsum"]
 #externalUrl: ""
 #showSummary: true
 date: 2024
@@ -18,10 +18,10 @@ responsibilities:
   - "System Design"
   - "User Interface Design"
 team:
-  - "Nishok Chetty, Product Manager"
-  - "Gerald Burns, Engineer"
-  - "Ben Geller, Research"
-  - "Mrinalini Garg, Analytics"
+  - "Product Manager"
+  - "Engineer"
+  - "Research"
+  - "Analytics"
 ---
 
 ## Lorem ipsum dolor sit amet

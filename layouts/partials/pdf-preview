@@ -1,0 +1,164 @@
+<!-- In your Hugo layout partial (e.g., layouts/partials/pdf-preview.html) -->
+<div class="pdf-preview-container card">
+    <div class="pdf-preview-header">
+        <h3>{{ .Title }}</h3>
+        <div class="pdf-controls">
+            <button onclick="prevPage()" class="button">Previous</button>
+            <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+            <button onclick="nextPage()" class="button">Next</button>
+        </div>
+    </div>
+    
+    <canvas id="pdf-canvas" class="pdf-canvas"></canvas>
+    
+    <div class="pdf-download">
+        <a href="{{ .Site.BaseURL }}pdfs/{{ .Params.pdffile }}" 
+           download
+           class="button button--primary">
+            Download PDF
+        </a>
+    </div>
+</div>
+
+<!-- Add required styling -->
+<style>
+.pdf-preview-container {
+    padding: 1.5rem;
+    margin: 2rem 0;
+    background-color: var(--card-background);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.pdf-preview-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.pdf-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pdf-canvas {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid var(--card-border-color);
+}
+
+.pdf-download {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/* Match Blowfish button styling */
+.button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary);
+    border-radius: var(--border-radius);
+    background: none;
+    color: var(--primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: var(--primary);
+    color: var(--theme-color-dark);
+}
+
+.button--primary {
+    background: var(--primary);
+    color: var(--theme-color-dark);
+}
+
+.button--primary:hover {
+    filter: brightness(1.1);
+}
+</style>
+
+<!-- Add PDF.js script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+// Set worker path
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+let pdfDoc = null,
+    pageNum = 1,
+    pageRendering = false,
+    pageNumPending = null,
+    scale = 1.5,
+    canvas = document.getElementById('pdf-canvas'),
+    ctx = canvas.getContext('2d');
+
+// Load the PDF
+function loadPDF(pdfPath) {
+    pdfjsLib.getDocument(pdfPath).promise.then(function(pdfDoc_) {
+        pdfDoc = pdfDoc_;
+        document.getElementById('page_count').textContent = pdfDoc.numPages;
+        
+        // Initial page render
+        renderPage(pageNum);
+    });
+}
+
+function renderPage(num) {
+    pageRendering = true;
+    pdfDoc.getPage(num).then(function(page) {
+        let viewport = page.getViewport({scale: scale});
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+        
+        let renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+        };
+        
+        let renderTask = page.render(renderContext);
+        
+        renderTask.promise.then(function() {
+            pageRendering = false;
+            if (pageNumPending !== null) {
+                renderPage(pageNumPending);
+                pageNumPending = null;
+            }
+        });
+    });
+    
+    document.getElementById('page_num').textContent = num;
+}
+
+function queueRenderPage(num) {
+    if (pageRendering) {
+        pageNumPending = num;
+    } else {
+        renderPage(num);
+    }
+}
+
+function prevPage() {
+    if (pageNum <= 1) {
+        return;
+    }
+    pageNum--;
+    queueRenderPage(pageNum);
+}
+
+function nextPage() {
+    if (pageNum >= pdfDoc.numPages) {
+        return;
+    }
+    pageNum++;
+    queueRenderPage(pageNum);
+}
+
+// Initialize PDF viewer with the path to your PDF
+window.onload = function() {
+    loadPDF('/pdfs/your-document.pdf');
+}
+</script>

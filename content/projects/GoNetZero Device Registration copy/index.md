@@ -1,12 +1,27 @@
 ---
 title: "Streamlining REC Device Registrations"
 summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna."
-categories: ["Post","Blog",]
-tags: ["post","lorem","ipsum"]
+categories: ["Projects","Blog",]
+tags: ["Projects","lorem","ipsum"]
 #externalUrl: ""
 #showSummary: true
 date: 2021-09-04
 draft: false
+year: "2020"
+role: "Lead Product Designer"
+responsibilities:
+  - "System Design"
+  - "User Interface Design"
+team:
+  - "Product Manager"
+  - "Engineer"
+  - "Research"
+  - "Analytics"
+figma:
+  url: "https://embed.figma.com/design/FWkoY9D6cSpq263oFweFWo/Asset-Registration---Iteration-4?node-id=1-11703&embed-host=share"
+  height: 600
+  title: "Interactive Prototype"
+  fullscreen: true
 ---
 
 #decarbonizationb image
