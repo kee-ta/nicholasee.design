@@ -478,8 +478,6 @@
 
   
 
-
-
 <style>
 .figma-embed-container {
   padding: 1.5rem;
@@ -492,6 +490,19 @@
 .figma-embed-header {
   margin-bottom: 1rem;
   text-align: center;
+}
+
+ 
+.figma-title {
+  font-family: var(--heading-font-family, sans-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+  letter-spacing: 0.5px;
 }
 
 .figma-embed-frame {
@@ -510,6 +521,10 @@
 @media (max-width: 768px) {
   .figma-embed-container {
     padding: 1rem;
+  }
+  
+  .figma-title {
+    font-size: 1.25rem;
   }
 }
 </style>
