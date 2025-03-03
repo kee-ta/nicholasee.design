@@ -7,38 +7,35 @@ tags: ["Projects","lorem","ipsum"]
 #showSummary: true
 date: 2021-09-04
 draft: false
-year: "2020"
-role: "Lead Product Designer"
+company: "GoNetZero"
+company_logo: "./gnzimage.jpg"
+weight: 1
+year: "2024"
+role: "Product Designer"
 responsibilities:
   - "System Design"
   - "User Interface Design"
+  - "User Research"
 team:
   - "Product Manager"
   - "Engineer"
   - "Research"
   - "Analytics"
 figma:
-  url: "https://embed.figma.com/design/FWkoY9D6cSpq263oFweFWo/Asset-Registration---Iteration-4?node-id=1-11703&embed-host=share"
+
+  url: "https://embed.figma.com/design/FWkoY9D6cSpq263oFweFWo/Asset-Registration---Iteration-4?node-id=0-1&embed-host=share"
   height: 600
-  title: "Interactive Prototype"
+  title: "Figma Design File"
   fullscreen: true
 ---
 
 #decarbonizationb image
 
-## 1. Title & Executive Summary
-
-### Project Title
-**Automated Registration Process for REC-Generating Devices**
-
-### Subtitle
-*Streamlining Device Registration for Enhanced Efficiency and Compliance*
-
-### Executive Summary
-Gonetzero, a recognized player in the renewable energy credits space, traditionally managed the registration of REC-generating devices via manual email processes. This method resulted in processing times of **3–4 months**, increased operational liability, and high manpower costs. Our engagement focused on designing a dedicated web form and process flow integrated within Gonetzero’s platform to enable self-registration by customers. This initiative reduced processing time to **1 month**, improved data governance, enhanced customer transparency, and significantly lowered manual intervention.
+## 1. Executive Summary
+GoNetZero, a decarbonization firm by SembCorp, traditionally managed the registration of REC-generating devices via manual email processes. This method resulted in processing times of **3 – 4 months**, increased operational liability, and high manpower costs. Our engagement focused on designing a dedicated web form and process flow integrated within Gonetzero’s platform to enable self-registration by customers. This initiative reduced processing time to **1 month**, improved data governance, enhanced customer transparency, and significantly lowered manual intervention.
 
 ### Key Metrics & Highlights
-- **Processing Time Reduction:** From 3–4 months to 1 month.
+- **Processing Time Reduction:** From 3 – 4 months to 1 month.
 - **Operational Efficiency:** Significant decrease in manhours required for registrations.
 - **Risk Mitigation:** Lowered liability through improved data governance.
 - **Enhanced User Experience:** Empowered customers with flexible, transparent registration.
