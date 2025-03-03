@@ -5,12 +5,13 @@ categories: ["Projects","Blog",]
 tags: ["Projects","lorem","ipsum"]
 #externalUrl: ""
 #showSummary: true
-date: 2024
+date: 2022-09-04
 draft: false
-featuredImage: "./cover.png"
+featuredImage: "./cover.jpg"
 weight: 2
 description: "How might we redesign the Miele@Home app to enhance feature discoverability, improve usability, and integrate smart inventory management—while aligning with Miele’s premium brand identity and ensuring a seamless user experience."
-company: "School Project"
+company: "Student Project"
+company_logo: "./appicon.png"
 year: "2022"
 role: "Project Manager & UX Designer"
 responsibilities:

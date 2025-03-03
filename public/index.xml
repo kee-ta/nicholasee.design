@@ -7,12 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 Nicholas Ee</copyright>
-    <lastBuildDate>Mon, 13 Jun 2022 20:55:37 +0100</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Streamlining REC Device Registrations</title>
       <link>http://localhost:1313/projects/gonetzero-device-registration-copy/</link>
-      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/projects/gonetzero-device-registration-copy/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna.</description>
@@ -22,17 +22,17 @@
     <item>
       <title>Miele@Home Refresh</title>
       <link>http://localhost:1313/projects/miele@home-redesign/</link>
-      <pubDate>Thu, 01 Jan 1970 09:33:44 +0900</pubDate>
+      <pubDate>Sun, 04 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/projects/miele@home-redesign/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/miele@home-redesign/cover.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/miele@home-redesign/cover.jpg" />
     </item>
     
     <item>
       <title>Modernizing Moodle LMS</title>
       <link>http://localhost:1313/projects/moodle-website-revamp/</link>
-      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/projects/moodle-website-revamp/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna.</description>

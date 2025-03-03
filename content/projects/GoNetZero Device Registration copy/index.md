@@ -5,7 +5,7 @@ categories: ["Projects","Blog",]
 tags: ["Projects","lorem","ipsum"]
 #externalUrl: ""
 #showSummary: true
-date: 2021-09-04
+date: 2024-09-04
 draft: false
 company: "GoNetZero"
 company_logo: "./gnzimage.jpg"

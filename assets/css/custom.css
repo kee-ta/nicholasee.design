@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* Single Tailwind import */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 /* Root variables */
 :root {
@@ -28,17 +28,23 @@ body button {
 
 /* Article card specific styles */
 .article-card {
-  @apply relative overflow-hidden rounded-lg border-2 border-neutral-200 
-         transition-all duration-300 ease-out;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem; /* rounded-lg */
+  border-width: 2px;
+  border-color: #e5e7eb; /* border-neutral-200 */
+  transition: all 0.3s ease-out;
 }
 
 .article-card:hover {
-  @apply border-primary-500 shadow-lg transform scale-[1.02];
+  border-color: #3b82f6; /* border-primary-500 */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  transform: scale(1.02);
 }
 
 /* Card image styles */
 .thumbnail_card {
-  @apply h-48 w-full bg-cover bg-center transition-transform duration-300;
+  @apply h-64 w-full bg-cover bg-center transition-transform duration-300;
 }
 
 .article-card:hover .thumbnail_card {
@@ -81,3 +87,4 @@ body button {
 .role-column, .team-column {
   @apply flex-1 min-w-[250px];
 }
+

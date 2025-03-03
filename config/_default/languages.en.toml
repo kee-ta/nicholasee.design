@@ -7,7 +7,7 @@ title = "NE"
   displayName = "English"
   isoCode = "en"
   rtl = false
-  dateFormat = "2 January 2006"
+  dateFormat = "2006"
   logo = "img/EndOfDay2.png"
   description = "Personal website of Nicholas Ee."
 
